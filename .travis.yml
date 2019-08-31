@@ -14,7 +14,6 @@ before_install:
 
 before_script:
   - docker-compose up -d --build
-  - docker-compose exec users-db psql -U postgres  -c "\l"
 
 script:
   - docker-compose exec users python manage.py test
