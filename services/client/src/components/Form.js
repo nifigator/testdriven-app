@@ -1,6 +1,10 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
 const Form = (props) => {
+  if (props.isAuthenticated) {
+    return <Redirect to='/' />
+  }
   return (
     <div>
       {props.formType === 'Login' &&
@@ -20,7 +24,7 @@ const Form = (props) => {
               placeholder="Enter a username"
               required
               value={props.formData.username}
-              onChange={props.handleFromChange}
+              onChange={props.handleFormChange}
             />
           </div>
 	}
