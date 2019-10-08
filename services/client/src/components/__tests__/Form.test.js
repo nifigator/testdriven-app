@@ -51,7 +51,7 @@ describe('When not authenticated', () => {
       const input = wrapper.find('input[type="email"]')
       expect(el.handleUserFormSubmit).toHaveBeenCalledTimes(0)
       expect(el.handleFormChange).toHaveBeenCalledTimes(0)
-      input.simutate('change')
+      input.simulate('change')
       expect(el.handleFormChange).toHaveBeenCalledTimes(1)
       wrapper.find('form').simulate('submit', el.formData)
       expect(el.handleUserFormSubmit).toHaveBeenCalledWith(el.formData)
