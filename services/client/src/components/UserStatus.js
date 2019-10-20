@@ -33,7 +33,7 @@ class UserStatus extends Component {
         email: res.data.data.email,
         id: res.data.data.id,
         username: res.data.data.username,
-        active: res.data.data.acive,
+        active: res.data.data.active,
         admin: res.data.data.admin,
       })
     })
@@ -42,7 +42,7 @@ class UserStatus extends Component {
   render() {
     if (!this.props.isAuthenticated) {
       return (
-        <p>You  must be logged in to view this. CLick <Link to="/login">here</Link> to log bask in.</p>
+        <p>You must be logged in to view this. CLick <Link to="/login">here</Link> to log bask in.</p>
       )
     }
     return (
